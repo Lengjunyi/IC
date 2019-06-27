@@ -15,8 +15,8 @@ if "calendar" not in str(login.text.encode("utf-8")):
 else:
     print("Successfully login.")
 
-# 下面代码我就不写了，如果你看到这里欢迎你做出一个能让同学们更方便查阅自己成绩的软件QAQ 2020届已经鸽了
-# 这里提供几个有用的接口，不过请不要乱用[滑稽]，如果想了解更多相关知识欢迎阅读各种html参考书目，如Headfirst系列，也可以加我wx
+# requests包没什么难度，后面我就不写了，自由发挥即可
+# 这里提供几个有用的接口，不过请不要乱用[滑稽]
 
 # 更改所在学期
 # type：post
@@ -40,5 +40,4 @@ else:
 # type：post
 # url: http://ams.bhsfic.com/student/curriculavariable/cancelCourseSelected
 # data:{"courseId" :  i}
-# alert: may not work if you don't first setSystemsSemsterIds
-# comment: courseId cannot be acquired if they are not released. However, one can enumerate over numbers to guess on it... Promise me, don't misuse it.
+# alert: may not work well if you don't first setSystemsSemsterIds
