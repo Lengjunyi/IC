@@ -16,7 +16,7 @@ else:
     print("Successfully login.")
 
 # 下面代码我就不写了，如果你看到这里欢迎你做出一个能让同学们更方便查阅自己成绩的软件QAQ 2020届已经鸽了
-# 这里提供几个有(hei)用(hei)的接口，不过请千万不要乱用哦，如果想了解更多欢迎阅读各种html参考书目，如Headfirst系列，也可以加我wx superliangjiacheng
+# 这里提供几个有用的接口，不过请不要乱用[滑稽]，如果想了解更多相关知识欢迎阅读各种html参考书目，如Headfirst系列，也可以加我wx
 
 # 更改所在学期
 # type：post
