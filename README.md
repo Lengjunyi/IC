@@ -1,2 +1,2 @@
 # IC
-High School Stuff
+Coding Repository for my codes related to my high school
