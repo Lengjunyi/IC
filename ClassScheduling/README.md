@@ -66,4 +66,4 @@ Strategies 2,4,5,7,8,10 are sad strategies, because in those cases 1 or 2 of the
 |Strategy 9|0|11|22|10|
 |Strategy 11|0|8|29|6|
 
-Thus we've got our winners! Final step, check with teachers, and be sure they are happy. In all strategies above there may still be drawbacks, but somebody's sacrifice is not avoidable. Rather, teachers could favor one strategy over another. Some teachers might want to have class in the same period so that in other ones they can have a intimate chat ^_^
+Thus we've got our winners! Final step, check with teachers, and be sure they are happy. In all strategies above there may still be drawbacks, but somebody's sacrifice is not avoidable. Rather, teachers could favor one strategy over another. Some teachers might want to have class in the same period so that in other ones they can have a intimate chat... you shall give them a favor!
