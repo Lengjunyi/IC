@@ -29,7 +29,7 @@ Then I dare to say 1 is better than 2.
 
 Still Not clear? Then...
 
-| # of People **at least** able to have N courses | 1 | 2 | 3 | 4 |
+| # of People able to have *at least* N courses | 1 | 2 | 3 | 4 |
 | ------ | ------ | ------ |------ |------ |
 | Strategy 1 | 18 | 18 | 13 | 3 |
 | Strategy 2 | 18 | 17 | 13 | 1 |
