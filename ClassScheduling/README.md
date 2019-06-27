@@ -56,7 +56,7 @@ We've got 11 answers, and their result distributions are:
 |Strategy 10|2|5|29|7|
 |Strategy 11|0|8|29|6|
 
-Strategies 2,4,5,7,8,10 are sad strategies, because in those cases 1 or 2 of them would only take one course for a whole year~~, then wasting their time during their free periods playing basketball and break a leg~~
+Strategies 2,4,5,7,8,10 are sad strategies, because in those cases 1 or 2 of them would only take one course for a whole year, ~~then wasting their time during their free periods playing basketball and break a leg~~
 
 | # of People | 1 | 2 | 3 | 4 |
 | ------ | ------ | ------ |------ |------ |
