@@ -4,17 +4,17 @@
 
 This piece of code was written to provide a solution for the following problem:
 
-> For the rising Junior, the school has opened up 11 AP courses, which would be divided to be held in 4 different periods. Since each individual is only able to take one course at a time (unless you have Hermione's magic watch), some courses are in conflict with other ones. Then it is our job to find a way to divide up the 11 courses up so that most people would be able to satisfy their own needs. Suppose we have the data for all students' course, how shall we give a good way to divide them up?
+> For the rising Junior, the school has opened up 11 AP courses, which would be divided to be held in 4 different periods. Since each individual is only able to take one course at a time (unless you have Hermione's magic watch), some courses are to be in conflict with other ones. Then it is your job to find a way to divide up the 11 courses up so that most people would be able to satisfy their own needs. Suppose we have the data for all students' course, how shall you give a good way to divide them up?
 
 ## Why we can enumerate?
 
 First let's analyze the problem. Perhaps we could put all 11 courses into one period, but intuition tells that it is better to cut it evenly. We should probably use a 2-3-3-3 combination. Thus how many ways can them be divided up? Use a little bit of math, we can find out that there are 92400 ways. (And further, if the order of the three "3"s doesn't matter, the number shall be divided by 6.)
 
-Then it is clear: we can simply enumerate all possible strategies, and then figure out which one is better.
+92400 is big, but for computers, it's just a little one. Then it is clear: we can simply enumerate all possible strategies, and then figure out which one is better.
 
 ## How can you compare two strategies?
 
-Let's simplify this problem a bit, say one is happier if he has more courses, no matter how many he chose at first. This shall not interfere with the nature of the question too much, but can result in less coding work.
+Let's simplify this problem a bit: say one is happier if he has more courses, no matter how many he chose at first. This shall not interfere with the nature of the question too much, but can result in less coding work.
 
 First, no single strategy can satisfy everyone. One strategy can simultaneous make 10 people get all classes they want while making another 10 only able to choose one course. Therefore, it is difficult to tell one best answer from all strategies.
 
@@ -34,9 +34,9 @@ Still Not clear? Then...
 | Strategy 1 | 18 | 18 | 13 | 3 |
 | Strategy 2 | 18 | 17 | 13 | 1 |
 
-The above should be self-explanatory.
+The above should be self-explanatory. Each figure from 1 is higher than 2. Enough to make a difference.
 
-Then we could use an array to store all acquired strategies, and if there is a new strategy, first compare it with all array members, pause and delete itself if there is one in the array strictly better than this strategy, then eliminate all that is definitely lamer than it, and finally insert itself into the array.
+Then we could use an array to store all acquired strategies, and if there is a new strategy, try to compare it with all array members. Quit the enumeration if there is one acquired strategy strictly better than our current strategy, then eliminate all that is definitely worse than it, and finally insert itself into the array.
 
 ## Finally, check out the answers!
 
