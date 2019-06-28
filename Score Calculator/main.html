@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="styles/demo.css" />
+	</head>
+
+	<body>
+		<div id="app">
+
+			<fieldset>
+				<legend>
+					Add New Catagory
+				</legend>
+				<div class="form-group">
+					<button @click="addCategory">Create</button>
+				</div>
+		</fieldset>
+            <div v-for="(person,index) in people">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>My Scores</th>
+                            <th>Maximum Scores</th>
+                            <th>Delete</th>
+                            <th>-----Weight:<input type="number" v-model="person.weight"/></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(grade,index2) in person.myscores">
+
+                            <td><input type="number" v-model="grade[0]"/></td>
+                            <td><input type="number" v-model="grade[1]"/></td>
+                            <td :class="'text-center'"><button @click="deleteSingleScore(index,index2)">Delete</button></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button @click="addScore(index)">Add New Score</button>
+                <button @click="deletePerson(index)">Delete Whole Category</button>
+                <br>
+                <br>
+            </div>
+            <button @click="calculate">Calculate</button>
+            <p>{{score}}</p>
+		</div>
+	</body>
+	<script src="vue.js"></script>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				newPerson: {
+					myscore: 10,
+					maximumscore: 10,
+
+				},
+				people: [{
+				    weight:40,
+					myscores:
+                        [
+                            [10,10]
+                        ]
+				}],
+                score:0
+            },
+			methods:{
+			    addCategory: function(){
+			      this.people.push({
+				    weight:40,
+					myscores:
+                        [
+                            [10,10]
+                        ]
+				})
+                },
+				addScore: function(index){
+					this.people[index].myscores.push([10,10])
+				},
+				deletePerson: function(index){
+					// 删一个数组元素
+					this.people.splice(index,1);
+				},
+                deleteSingleScore: function(index,index2){
+					// 删一个数组元素
+					this.people[index].myscores.splice(index2,1);
+				},
+                calculate: function () {
+			        var totalweight = 0;
+			        var totalscore = 0;
+                    for(i=0;i<this.people.length;i++){
+                        var numberof = 0;
+                        var totalper = 0;
+                        for(j=0;j<this.people[i].myscores.length;j++){
+                            var temp = this.people[i].myscores[j];
+                            numberof +=1;
+                            totalper += temp[0]/temp[1]
+                            //alert([totalweight,totalscore,numberof,totalper])
+                        }
+                        totalweight+= 1.0*this.people[i].weight;
+                        totalscore += this.people[i].weight*totalper/numberof;
+                    }
+                    this.score = totalscore/totalweight*100
+                }
+			}
+		})
+	</script>
+
+</html>
