@@ -79,11 +79,11 @@
 
                     #以下为数据库使用常量
 
-                    if ($_GET["UserId"]!="20170112"){
-                        $servername = "localhost";
-                        $username = "sql_zlxiequs";
-                        $password = "Zjytql";
-                        $dbname = "sql_zlxiequs";
+                    if ($_GET["UserId"]!="#BLOCKED"){
+                        $servername = "#BLOCKED";
+                        $username = "#BLOCKED";
+                        $password = "#BLOCKED";
+                        $dbname = "#BLOCKED";
 
 // 创建连接
                         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -102,7 +102,7 @@
                     #
                     # LOG 1.2
                     #
-                    # 如果是20170112登录则不会触发 ClickNumber 的计数
+                    # 如果是测试登录登录则不会触发 ClickNumber 的计数
                     #
                     # LOG 1.3:
                     #
