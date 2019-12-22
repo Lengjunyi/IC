@@ -1,6 +1,6 @@
 # IC
 Tools used in high school
-## MyGrades
+## MyGrades (Scraper)
 > Now available on [iCalendar.Cloud](https://icalendar.cloud/). Just use your AMS account.
 ## ClassScheduling
 > Brutal Force to find best solution for a unique problem
